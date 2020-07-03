@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="17dp"
+    tools:context=".MainActivity">
+<!--    기본 배치 : 좌 상단-->
+    <Button
+        android:id="@+id/button00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"/>
+<!--    겹쳐짐-->
+    <Button
+        android:id="@+id/button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01" />
+    <Button
+        android:id="@+id/button02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/button03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:id="@+id/button04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:id="@+id/button05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/button06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/button07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+<!--    특정뷰를 기준으로 배치-->
+    <Button
+        android:id="@+id/button08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08"
+        android:layout_below="@id/button01"/>
+    <Button
+        android:id="@+id/button09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09"
+        android:layout_toRightOf="@id/button02"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:layout_above="@id/button05"
+        android:layout_alignLeft="@id/button05"/>
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11"
+        android:textSize="40sp"
+        android:layout_toRightOf="@id/button05"
+        android:layout_alignBaseline="@id/button05"/>
+<!--    Baseline : text 기준으로 아래라인을 맞춤-->
+
+<!--    뷰가 겹칠때 ->나중에 만든 뷰가 위에 존재-->
+<!--    BUT! Button 은 최우선시 되기에
+        다른 뷰를 나중에 만들어도 아래에 배치됨-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NICE!"
+            android:layout_marginLeft="100dp"/>
+    </LinearLayout>
+</RelativeLayout>
